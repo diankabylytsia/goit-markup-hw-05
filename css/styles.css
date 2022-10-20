@@ -9,6 +9,7 @@
   --small-color: #f5f4fa;
   --min-color: rgba(255, 255, 255, 0.6);
   --btn-color: #188ce8;
+  --animate: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 p,
 h1,
@@ -110,7 +111,7 @@ body {
   padding-bottom: 32px;
   text-decoration: none;
   position: relative;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 .header-link:hover,
 .header-link:focus {
@@ -125,7 +126,7 @@ body {
   height: 5px;
   background-color: var(--back-color);
   transform: scaleX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animate);
 }
 .header-link:hover::after {
   transform: scaleX(1);
@@ -166,7 +167,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--hero-color);
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 .header-contacts-link:hover,
 .header-contacts-link:focus {
@@ -174,7 +175,7 @@ body {
 }
 .header-icon {
   fill: var(--hero-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animate);
 }
 .header-contacts-link:hover .header-icon,
 .header-contacts-link:focus .header-icon {
@@ -225,7 +226,7 @@ body {
   border-color: transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   padding: 10px 32px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animate);
 }
 
 .hero-button:hover,
@@ -384,7 +385,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animate);
 }
 .specialists-soc-link:hover,
 .specialists-soc-link:focus {
@@ -392,7 +393,7 @@ body {
 }
 .soc-icon {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animate);
 }
 .specialists-soc-link:hover .soc-icon,
 .specialists-soc-link:focus .soc-icon {
@@ -425,11 +426,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--animate);
 }
 .clients-icon {
   fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--animate);
 }
 .clients-image-link:hover,
 .clients-image-link:focus {
@@ -474,7 +475,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--medium-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 .footer-adress-link:hover,
 .footer-adress-link:focus {
@@ -489,7 +490,7 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--min-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate);
 }
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
@@ -518,7 +519,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--animate);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus {
@@ -539,7 +540,7 @@ body {
 .portfolio-link {
   display: block;
   text-decoration: none;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--animate);
 }
 .filter-item {
   margin-right: 8px;
@@ -558,9 +559,8 @@ body {
   border-color: transparent;
   border-radius: 4px;
   padding: 6px 22px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--animate), background-color var(--animate),
+    box-shadow var(--animate);
 }
 .filter-button:hover,
 .filter-button:focus {
@@ -601,7 +601,7 @@ body {
   border-right: 1px solid #eeeeee;
 }
 .portfolio-item {
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animate);
 }
 .portfolio-item:hover .portfolio-text-wrap {
   transform: translateY(0);
@@ -625,7 +625,7 @@ body {
   padding-left: 24px;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--animate);
 }
 /*----------------MODAL---------------*/
 .backdrop {
@@ -634,8 +634,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animate), visibility var(--animate);
 }
 .modal {
   width: 528px;
